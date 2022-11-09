@@ -1,9 +1,9 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+import { merge } from "webpack-merge";
+import common from "./webpack.common";
 
 const dev = {
-  mode: "development",
-  stats: "errors-warnings",
+  mode: "development" as "development",
+  stats: "errors-warnings" as "errors-warnings",
   devtool: "eval",
   devServer: {
     open: true,
@@ -11,4 +11,4 @@ const dev = {
   },
 };
 
-module.exports = merge(common, dev);
+export default merge(common, dev);

@@ -1,7 +1,7 @@
 import { Configuration } from "webpack";
 import { join, resolve } from "path";
-import * as HtmlWebpackPlugin from "html-webpack-plugin";
-import * as CopyWebpackPlugin from "copy-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const config: Configuration = {
   entry: ["./src/index.ts"],
@@ -33,7 +33,7 @@ const config: Configuration = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "./res", to: "res" },
-        { from: "./favicon.ico", to: "" },
+        { from: "./res/favicon.ico", to: "" },
       ],
     }),
   ],
